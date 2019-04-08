@@ -37,10 +37,33 @@ public class ClipTest {
         assertFalse(_clip.getEnd() == 1);
         _clip.setEnd(3);
         assertTrue(_clip.getEnd() == 3);
+        
+        }
+        
+        @Test
+        public void testEqualsOnEqualClips() {
+        Clip clip1 = new Clip();
+        Clip clip2 = new Clip();
+        
+        String title = "Same title";
+        int endValue = 3;
+        int startValue = 2;
+        
+        clip1.setTitle(title);
+        clip2.setTitle(title);
+        
+        clip1.setEnd(endValue);
+        clip2.setEnd(endValue);
+        
+        clip1.setStart(startValue);
+        clip2.setStart(startValue);
+        
+        assertTrue(clip1.equals(clip2));
+}
 }
 
         
-}
+
     
     
 
