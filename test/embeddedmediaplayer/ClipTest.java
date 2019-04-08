@@ -29,6 +29,15 @@ public class ClipTest {
         _clip.setTitle(null);
         assertEquals(expectedTitle, _clip.getTitle());
         }
+        
+        @Test
+        public void testSetEndBeforeStartKeepsPreviousValue() {
+        _clip.setStart(2);
+        _clip.setEnd(1);
+        assertFalse(_clip.getEnd() == 1);
+        _clip.setEnd(3);
+        assertTrue(_clip.getEnd() == 3);
+}
 
         
 }
