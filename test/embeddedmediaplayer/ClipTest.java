@@ -59,6 +59,17 @@ public class ClipTest {
         clip2.setStart(startValue);
         
         assertTrue(clip1.equals(clip2));
+        }
+        
+        @Test
+        public void testsetMax(){
+         _clip.setEnd(8);
+        int new_max = _clip.getMax();
+        _clip.setMax(6);
+        int afterMax = _clip.getMax();
+        assertEquals(new_max,afterMax);
+        
+    
 }
 }
 
